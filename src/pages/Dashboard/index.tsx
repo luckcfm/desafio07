@@ -95,13 +95,6 @@ const Dashboard: React.FC = () => {
             <tbody>
               {transactions &&
                 transactions.map(transaction => {
-                  let signal = '';
-                  if (transaction.type === 'outcome') {
-                    signal = ' - ';
-                  }
-                  const data = new Date(
-                    transaction.created_at,
-                  ).toLocaleDateString('pt-br');
                   return (
                     <tr key={transaction.id}>
                       <td className="title">{transaction.title}</td>
